@@ -1,0 +1,11 @@
+<?php
+if (!function_exists('countWords')) {
+/*Räknar ord*/
+function countWords($word, $url='http://en.wikipedia.org/wiki/Miles_Davis')
+ {
+ $text = file_get_contents($url);
+ $count = substr_count($text, $word);
+ $message = sprintf('The word <em>%s</em> was found on %s <b>%d</b> times.', $word, $url, $count);
+ return $message;
+ }
+}
