@@ -13,8 +13,8 @@ $my_file = 'file.txt';
 $handle = fopen($my_file, 'w') or die('Cannot open file:  '.$my_file);
 $data = date(("y/m/d"));
 fwrite($handle, $data);
-$user_agent = "\n". date("h:i:sa");
+$new_data = "\n". date("h:i:sa");
 fwrite($handle, $user_agent);
-$user_agent = "\n". $_SERVER['HTTP_USER_AGENT'];
+$new_data = "\n". $_SERVER['HTTP_USER_AGENT'];
 fwrite($handle, $new_data);
 ?>
