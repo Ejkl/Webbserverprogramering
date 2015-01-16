@@ -19,7 +19,7 @@ class Ejkl_Button
 			@return int*/
 		public function increasePageview($currentCount)
 		{
-			return $ccurrentCount +1;
+			return $currentCount +1;
 		}
 	/*	Devide clicks by views in order to get the current conversion rate
 	@param int $clicks
@@ -49,6 +49,22 @@ $color=$options[$randomIndex];
 /*Save data to file*/
 $my_file = 'file.csv';
 $handle = fopen($my_file, 'w') or die('Cannot open file:  '.$my_file);
-$new_data = "\n". $color;
+$new_data = "";
+foreach($options as $key => $value) {
+	$clicks = 0  ;
+	$views  = 0 ;
+	echo ++$x
+	$new_data = $new_data . $value . "," . $clicks . "," . $views . "\n";
+}
 fwrite($handle, $new_data);
+//When button click reload page
+
+if (isset($_POST['button']))
+{
+   echo count($keys); 
+}  
+
+
+
+
 

@@ -49,8 +49,9 @@ require_once('button.php');
 		</style>
 	</head>
 	<body>
-	<form action="." method="post">
-	<input type="button" value="ADD TO CART" class="<?php echo $color; ?> "/>
+	<!--reloads the page on button click-->
+	<form action="index.php" method="submit">
+	<input type="Submit" name="Submit1"value="ADD TO CART" class="<?php echo $color; ?> "/>
 	<div class="text">Click the button or reload the page. </div>
 	</form>
 	</body>
