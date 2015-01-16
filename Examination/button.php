@@ -53,15 +53,16 @@ $new_data = "";
 foreach($options as $key => $value) {
 	$clicks = 0  ;
 	$views  = 0 ;
-	echo ++$x
+//funkar ej --->	echo ++$x
 	$new_data = $new_data . $value . "," . $clicks . "," . $views . "\n";
 }
-fwrite($handle, $new_data);
+
+//fwrite($handle, $new_data);
 //When button click reload page
 
-if (isset($_POST['button']))
-{
-   echo count($keys); 
+//if (isset($_POST['button']))
+//{
+  // echo count($keys); 
 }  
 
 
